@@ -1,0 +1,136 @@
+a{
+    text-decoration: none;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    color: #212529;
+    height: 60px;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-item {
+    margin-right: 20px;
+  }
+  
+  .navbar-link {
+    color: #212529;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .navbar-link:hover {
+    color: #007bff;
+  }
+  
+  .navbar-cart {
+    margin-left: auto;
+  }
+  
+  .navbar-cart-icon {
+    font-size: 1.2rem;
+  }
+  .navbar-toggle{
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap;
+    }
+    .navbar-logo {
+      order: 2;
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+    .bars{
+        display: block;
+       }
+    .navbar-menu {
+      order: 3;
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f8f9fa;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 1;
+      padding: 20px 0;
+    }
+    .navbar-menu.show {
+      display: flex;
+    }
+    .navbar-item {
+      margin: 10px 0;
+    }
+    .navbar-toggle{
+        display: block;
+      }
+    .navbar-toggle {
+      order: 1;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+    }
+    .navbar-toggle:focus {
+      outline: none;
+    }
+    .navbar-toggle-icon {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: #212529;
+      border-radius: 3px;
+      position: relative;
+      transition: transform 0.2s ease-out;
+    }
+    .navbar-toggle-icon:before,
+    .navbar-toggle-icon:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #212529;
+      border-radius: 3px;
+      position: absolute;
+      transition: transform 0.2s ease-out;
+    }
+    .navbar-toggle-icon:before {
+      top: -10px;
+    }
+    .navbar-toggle-icon:after {
+      bottom: -10px;
+    }
+    .navbar-toggle.open .navbar-toggle-icon {
+      transform: rotate(45deg);
+    }
+    .navbar-toggle.open .navbar-toggle-icon:before {
+      transform: rotate(90deg) translate(8px, 8px);
+    }
+    .navbar-toggle.open .navbar-toggle-icon:after {
+      transform: rotate(-90deg) translate(8px, -8px);
+    }
+  }
+  
